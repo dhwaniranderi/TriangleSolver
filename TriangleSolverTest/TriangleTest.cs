@@ -170,5 +170,57 @@ namespace TriangleSolverTest
             Assert.AreEqual(expected, actual);
         }
 
+
+        //Verifying a zero length for one or more sides Test Case - 1
+        [Test]
+        public void ZeroLengthSideTest1()
+        {
+            // Arrange
+            int firstSide = 5;
+            int secondSide = 0;
+            int thirdSide = 10;
+            string expected = "Invalid Triangle - a zero has been detected";
+
+            // Act
+            string actual = TriangleSolver.Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        //Verifying a zero length for one or more sides Test Case - 2
+        [Test]
+        public void ZeroLengthSideTest2()
+        {
+            // Arrange
+            int firstSide = 5;
+            int secondSide = 0;
+            int thirdSide = 0;
+            string expected = "Invalid Triangle - a zero has been detected";
+
+            // Act
+            string actual = TriangleSolver.Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        //Verifying a zero length for one or more sides Test Case - 3
+        [Test]  
+        public void ZeroLengthSideTest3()
+        {
+            // Arrange
+            int firstSide = 0;
+            int secondSide = 0;
+            int thirdSide = 0;
+            string expected = "Invalid Triangle - a zero has been detected";
+
+            // Act
+            string actual = TriangleSolver.Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }
