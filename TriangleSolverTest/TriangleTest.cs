@@ -222,5 +222,57 @@ namespace TriangleSolverTest
             Assert.AreEqual(expected, actual);
         }
 
+
+        //verifying an invalid response (other than a zero length) Test - 1
+        [Test]
+        public void InvalidResponseTest1()
+        {
+            // Arrange
+            int firstSide = 1;
+            int secondSide = 2;
+            int thirdSide = 5;
+            string expected = "INVALID!!";
+
+            // Act
+            string actual = TriangleSolver.Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        //verifying an invalid response (other than a zero length) Test - 2
+        [Test]
+        public void InvalidResponseTest2()
+        {
+            // Arrange
+            int firstSide = -10;
+            int secondSide = 10;
+            int thirdSide = 5;
+            string expected = "INVALID!!";
+
+            // Act
+            string actual = TriangleSolver.Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        //verifying an invalid response (other than a zero length) Test - 3
+        [Test]
+        public void InvalidResponseTest3()
+        { 
+            // Arrange
+            int firstSide = 5;
+            int secondSide = 7;
+            int thirdSide = 15;
+            string expected = "INVALID!!";
+
+            // Act
+            string actual = TriangleSolver.Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }
